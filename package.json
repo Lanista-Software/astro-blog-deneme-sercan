@@ -1,0 +1,40 @@
+{
+  "name": "astro-blog",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.17.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "contentrain:generate": "contentrain generate",
+    "deploy:netlify": "pnpm build"
+  },
+  "dependencies": {
+    "@contentrain/query": "^5.1.0",
+    "astro": "^6.0.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/node": "^24.4.0",
+    "contentrain": "^0.3.1",
+    "typescript": "^5.9.2"
+  },
+  "imports": {
+    "#contentrain": {
+      "types": "./.contentrain/client/index.d.ts",
+      "import": "./.contentrain/client/index.mjs",
+      "require": "./.contentrain/client/index.cjs"
+    },
+    "#contentrain/*": {
+      "types": "./.contentrain/client/*.d.ts",
+      "import": "./.contentrain/client/*.mjs",
+      "require": "./.contentrain/client/*.cjs"
+    }
+  }
+}

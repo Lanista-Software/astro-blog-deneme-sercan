@@ -1,0 +1,39 @@
+{
+  "domain": "editorial",
+  "fields": {
+    "author": {
+      "model": "author",
+      "required": true,
+      "type": "relation"
+    },
+    "categories": {
+      "model": "blog-category",
+      "type": "relations"
+    },
+    "cover_image": {
+      "type": "image"
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "published_at": {
+      "required": true,
+      "type": "date"
+    },
+    "reading_time": {
+      "type": "integer"
+    },
+    "slug": {
+      "required": true,
+      "type": "slug",
+      "unique": true
+    },
+    "title": {
+      "required": true,
+      "type": "string"
+    }
+  },
+  "i18n": true,
+  "id": "blog-post",
+  "kind": "document"
+}

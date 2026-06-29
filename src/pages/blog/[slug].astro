@@ -1,0 +1,52 @@
+---
+import { document } from "../../../.contentrain/client/index.mjs";
+import type { Author, BlogCategory, BlogPost } from "../../../.contentrain/client/index.d.ts";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+type BlogPostWithRelations = BlogPost & {
+  author?: Author;
+  categories?: BlogCategory[];
+};
+
+export function getStaticPaths() {
+  const posts = document("blog-post")
+    .locale("en")
+    .include("author", "categories")
+    .all() as BlogPostWithRelations[];
+
+  return posts.map((post) => ({
+      params: { slug: post.slug },
+      props: { post },
+  }));
+}
+
+const { post } = Astro.props as { post: BlogPostWithRelations };
+const paragraphs = String(post.content ?? "")
+  .split(/\n\s*\n/g)
+  .filter(Boolean);
+const publishedAt = new Intl.DateTimeFormat("en", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+}).format(new Date(post.published_at));
+---
+
+<BaseLayout title={post.title} description={post.excerpt}>
+  <article class="article">
+    <a href="/" class="back-link">Back to journal</a>
+    <div class="meta" style="margin-bottom: 1rem;">
+      <span>{post.categories?.[0]?.name ?? "Journal"}</span>
+      <span>{publishedAt}</span>
+      <span>{post.reading_time} min read</span>
+    </div>
+    <h1>{post.title}</h1>
+    <p class="muted" style="font-size: 1.15rem; line-height: 1.8;">{post.excerpt}</p>
+    <div class="meta" style="margin: 1rem 0 2rem;">
+      {post.author?.avatar ? <img src={post.author.avatar} alt={post.author.name ?? "Author"} class="avatar" /> : null}
+      <span>{post.author?.name}</span>
+      <span>{post.author?.role}</span>
+    </div>
+    {post.cover_image ? <img src={post.cover_image} alt={post.title} class="post-media article-media" /> : null}
+    {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+  </article>
+</BaseLayout>

@@ -1,0 +1,128 @@
+{
+  "content": {
+    "default_locale": "en",
+    "domains": [
+      {
+        "description": "Global site chrome, SEO defaults, and reusable platform settings.",
+        "id": "system",
+        "models": [
+          "site-settings",
+          "navigation",
+          "footer",
+          "seo-defaults"
+        ]
+      },
+      {
+        "description": "Editorial publishing content including authors, categories, and long-form posts.",
+        "id": "editorial",
+        "models": [
+          "author",
+          "blog-category",
+          "blog-post"
+        ]
+      }
+    ],
+    "i18n_strategy": "file-per-locale",
+    "import_pattern": "import { query, getCollection, getDocument, getSingleton } from '#contentrain'",
+    "supported_locales": [
+      "en"
+    ]
+  },
+  "conventions": {
+    "allowed_richtext_tags": [
+      "p",
+      "strong",
+      "em",
+      "a",
+      "ul",
+      "ol",
+      "li",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "blockquote",
+      "code",
+      "pre",
+      "img",
+      "br",
+      "hr",
+      "table",
+      "thead",
+      "tbody",
+      "tr",
+      "th",
+      "td",
+      "del",
+      "ins",
+      "sup",
+      "sub",
+      "abbr",
+      "mark",
+      "details",
+      "summary"
+    ],
+    "brand_terms": {
+      "company_name": "Contentrain",
+      "product_name": "Contentrain Astro Blog"
+    },
+    "forbidden_terms": [
+      "click here",
+      "lorem ipsum",
+      "TODO",
+      "TBD"
+    ],
+    "max_description_length": 160,
+    "max_title_length": 80,
+    "target_reading_level": "grade-8",
+    "tone": "Editorial and calm. Clear opinions with precise language."
+  },
+  "lastOperation": {
+    "entries": [],
+    "locale": "en",
+    "model": "",
+    "source": "mcp-local",
+    "timestamp": "2026-03-26T00:00:00.000Z",
+    "tool": "contentrain_init"
+  },
+  "normalize": {
+    "ignore_patterns": [
+      "dist/",
+      "node_modules/",
+      ".astro/",
+      ".contentrain/",
+      "*.test.*",
+      "*.spec.*"
+    ],
+    "import_rewrite": "import { query } from '#contentrain'",
+    "scan_dirs": [
+      "src/components/",
+      "src/pages/",
+      "src/layouts/"
+    ],
+    "scan_extensions": [
+      ".astro",
+      ".ts",
+      ".tsx"
+    ]
+  },
+  "project": {
+    "content_consumption": "build-time",
+    "description": "Premium Astro editorial starter powered by Contentrain SDK and seeded structured content.",
+    "name": "contentrain-starter-astro-blog",
+    "package_manager": "pnpm",
+    "src_dir": "src/",
+    "stack": "astro",
+    "stack_version": "6.x"
+  },
+  "stats": {
+    "entries": 12,
+    "lastSync": "2026-03-26T00:00:00.000Z",
+    "locales": [
+      "en"
+    ],
+    "models": 7
+  },
+  "version": "1"
+}

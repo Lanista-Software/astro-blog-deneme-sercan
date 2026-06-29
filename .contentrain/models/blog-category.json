@@ -1,0 +1,20 @@
+{
+  "domain": "editorial",
+  "fields": {
+    "name": {
+      "required": true,
+      "type": "string"
+    },
+    "slug": {
+      "required": true,
+      "type": "slug",
+      "unique": true
+    },
+    "summary": {
+      "type": "text"
+    }
+  },
+  "i18n": true,
+  "id": "blog-category",
+  "kind": "collection"
+}

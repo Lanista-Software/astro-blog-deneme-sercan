@@ -1,0 +1,104 @@
+---
+import { access, readFile, readdir } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { singleton } from "../../.contentrain/client/index.mjs";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+type ModelField = {
+  type?: string;
+};
+
+type ModelSchema = {
+  id: string;
+  kind: string;
+  domain: string;
+  fields?: Record<string, ModelField>;
+};
+
+type DomainGroup = {
+  domain: string;
+  models: ModelSchema[];
+};
+
+const site = singleton("site-settings").locale("en").get();
+const currentDir = path.dirname(fileURLToPath(import.meta.url));
+async function resolveStarterRoot() {
+  const candidates = [
+    path.resolve(currentDir, "../.."),
+    path.resolve(currentDir, "../../.."),
+    process.cwd(),
+    path.resolve(process.cwd(), ".."),
+  ];
+
+  for (const candidate of candidates) {
+    try {
+      await access(path.join(candidate, ".contentrain", "models"));
+      return candidate;
+    } catch {}
+  }
+
+  throw new Error("Unable to resolve starter root for architecture page.");
+}
+
+const rootDir = await resolveStarterRoot();
+const modelDir = path.join(rootDir, ".contentrain", "models");
+const modelFiles = (await readdir(modelDir)).sort();
+const models: ModelSchema[] = await Promise.all(
+  modelFiles.map(async (file: string) =>
+    JSON.parse(await readFile(path.join(modelDir, file), "utf8")) as ModelSchema,
+  ),
+);
+const domains: string[] = [...new Set(models.map((model: ModelSchema) => model.domain))].sort((left, right) =>
+  left.localeCompare(right, "en")
+);
+const domainGroups: DomainGroup[] = domains.map((domain: string) => ({
+  domain,
+  models: models.filter((model: ModelSchema) => model.domain === domain),
+}));
+---
+
+<BaseLayout title="Architecture" description="Domain-based Contentrain model architecture for the editorial starter.">
+  <main class="shell">
+    <header class="site-header">
+      <a href="/" class="brand">{site.site_name}</a>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="https://docs.contentrain.io/">Docs</a>
+        <a href="https://studio.contentrain.io/">Studio</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">Content architecture</div>
+      <h1>Domain-based schemas that match a real editorial build.</h1>
+      <p class="hero-copy">
+        This page reads the local Contentrain model files directly. What you see here is the actual
+        schema the starter is built from, grouped by domain and field structure.
+      </p>
+    </section>
+
+    <section class="schema-grid">
+      {domainGroups.map((group: DomainGroup) => (
+        <article class="feature-card">
+          <h2 style="text-transform: capitalize;">{group.domain}</h2>
+          <p class="muted">{group.models.length} models in this domain</p>
+          <div class="field-list">
+            {group.models.map((model: ModelSchema) => (
+              <div class="schema-card">
+                <strong>
+                  {model.id} <span class="muted">({model.kind})</span>
+                </strong>
+                <div class="chip-list">
+                  {(Object.entries(model.fields ?? {}) as [string, ModelField][]).map(([field, definition]) => (
+                    <span class="field-chip">{field}: {definition.type ?? "unknown"}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </article>
+      ))}
+    </section>
+  </main>
+</BaseLayout>

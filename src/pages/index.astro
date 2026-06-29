@@ -1,0 +1,121 @@
+---
+import { document, singleton } from "../../.contentrain/client/index.mjs";
+import type { Author, BlogCategory, BlogPost, Navigation } from "../../.contentrain/client/index.d.ts";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+type BlogPostWithRelations = BlogPost & {
+  author?: Author;
+  categories?: BlogCategory[];
+};
+
+const site = singleton("site-settings").locale("en").get();
+const nav = singleton("navigation").locale("en").get();
+type NavItem = NonNullable<Navigation["items"]>[number];
+const posts = document("blog-post")
+  .locale("en")
+  .include("author", "categories")
+  .all()
+  .toSorted((left, right) => String(right.published_at).localeCompare(String(left.published_at), "en")) as BlogPostWithRelations[];
+const featuredPost = posts[0];
+
+const formatDate = (value: string) =>
+  new Intl.DateTimeFormat("en", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(new Date(value));
+---
+
+<BaseLayout title={site.site_name} description={site.site_tagline}>
+  <main class="shell">
+    <header class="site-header">
+      <a href="/" class="brand">{site.site_name}</a>
+      <nav class="nav">
+        {nav.items?.map((item: NavItem) => <a href={item.href}>{item.label}</a>)}
+        <a href={nav.cta_href}>{nav.cta_label}</a>
+      </nav>
+    </header>
+
+    <section class="hero hero-grid">
+      <div>
+        <div class="eyebrow">Editorial Starter</div>
+        <h1>Publishing that feels considered from the first screen.</h1>
+        <p class="hero-copy">
+          {site.site_tagline} This starter is designed for essays, product narratives, founder letters,
+          and journals that need stronger hierarchy than a default blog theme.
+        </p>
+      </div>
+      {
+        featuredPost ? (
+          <a href={`/blog/${featuredPost.slug}`} class="feature-card hero-visual">
+            {featuredPost.cover_image ? (
+              <img
+                src={featuredPost.cover_image}
+                alt={featuredPost.title}
+                class="post-media"
+              />
+            ) : null}
+            <div class="meta">
+              <span>{featuredPost.categories?.[0]?.name ?? "Journal"}</span>
+              <span>{formatDate(featuredPost.published_at)}</span>
+            </div>
+            <h2>{featuredPost.title}</h2>
+            <p class="muted">{featuredPost.excerpt}</p>
+          </a>
+        ) : null
+      }
+    </section>
+
+    <section class="feature-row">
+      <article class="feature-card">
+        <h2>Built for long-form reading</h2>
+        <p class="muted">
+          Quiet chrome, narrow measure, and clear metadata keep the emphasis on the article instead
+          of the template.
+        </p>
+      </article>
+      <article class="feature-card">
+        <h2>Structured content model</h2>
+        <p class="muted">
+          Authors, categories, posts, navigation, footer, and SEO are modeled for Contentrain from
+          day one.
+        </p>
+      </article>
+      <article class="feature-card">
+        <h2>Deploy-first defaults</h2>
+        <p class="muted">
+          Astro keeps the output fast and static-friendly while still letting the site feel refined.
+        </p>
+      </article>
+    </section>
+
+    <section style="padding: 4rem 0 6rem;">
+      <div class="meta" style="margin-bottom: 1rem;">
+        <span>Latest writing</span>
+        <span>3 seeded entries</span>
+      </div>
+      <div class="post-grid">
+        {
+          posts.map((post) => (
+            <a href={`/blog/${post.slug}`} class="post-card">
+              {post.cover_image ? <img src={post.cover_image} alt={post.title} class="post-media" /> : null}
+              <div class="meta">
+                <span>{post.categories?.[0]?.name ?? "Journal"}</span>
+                <span>{formatDate(post.published_at)}</span>
+              </div>
+              <h2>{post.title}</h2>
+              <p class="muted">{post.excerpt}</p>
+              <div class="meta author-badge">
+                {post.author?.avatar ? (
+                  <img src={post.author.avatar} alt={post.author.name ?? "Author"} class="avatar" />
+                ) : null}
+                <span>{post.author?.name}</span>
+                <span>{post.reading_time} min read</span>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>

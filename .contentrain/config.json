@@ -1,0 +1,15 @@
+{
+  "domains": [
+    "system",
+    "editorial"
+  ],
+  "locales": {
+    "default": "en",
+    "supported": [
+      "en"
+    ]
+  },
+  "stack": "astro",
+  "version": 1,
+  "workflow": "auto-merge"
+}

@@ -1,0 +1,24 @@
+{
+  "domain": "editorial",
+  "fields": {
+    "avatar": {
+      "type": "image"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "name": {
+      "required": true,
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "social_url": {
+      "type": "url"
+    }
+  },
+  "i18n": true,
+  "id": "author",
+  "kind": "collection"
+}

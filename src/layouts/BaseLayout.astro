@@ -1,0 +1,331 @@
+---
+import { singleton } from "../../.contentrain/client/index.mjs";
+import type { Footer } from "../../.contentrain/client/index.d.ts";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const site = singleton("site-settings").locale("en").get();
+const seo = singleton("seo-defaults").locale("en").get();
+const footer = singleton("footer").locale("en").get();
+type FooterColumn = NonNullable<Footer["columns"]>[number];
+type FooterLink = NonNullable<FooterColumn["links"]>[number];
+const pageTitle = title ? `${title} | ${site.site_name}` : site.site_name;
+const pageDescription = description ?? seo.meta_description;
+---
+
+<!doctype html>
+<html lang="en" data-theme="editorial-dawn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={pageDescription} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <slot />
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div class="footer-copy">
+          <strong>{site.site_name}</strong>
+          <p>{footer.blurb}</p>
+        </div>
+        <div class="footer-columns">
+          {
+            footer.columns?.map((column: FooterColumn) => (
+              <section class="footer-column">
+                <h2>{column.title}</h2>
+                <div class="footer-links">
+                  {column.links?.map((link: FooterLink) => <a href={link.href}>{link.label}</a>)}
+                </div>
+              </section>
+            ))
+          }
+        </div>
+      </div>
+      <div class="shell footer-legal">{footer.legal_notice}</div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  @import "../styles/tokens.css";
+
+  :root {
+    --blog-shell-width: min(72rem, calc(100vw - 3rem));
+    --blog-reading-width: min(42rem, calc(100vw - 3rem));
+  }
+
+  html {
+    background: radial-gradient(circle at top, rgba(212, 163, 115, 0.28), transparent 30%),
+      var(--ct-color-bg);
+    color: var(--ct-color-text);
+    font-family: "Source Serif 4", Georgia, serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .shell {
+    width: var(--blog-shell-width);
+    margin: 0 auto;
+  }
+
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--ct-color-border);
+  }
+
+  .brand {
+    font-family: "Fraunces", "Iowan Old Style", serif;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .nav {
+    display: flex;
+    gap: 1rem;
+    color: var(--ct-color-muted);
+    font-family: "Inter", "Helvetica Neue", sans-serif;
+    font-size: 0.92rem;
+  }
+
+  .hero {
+    padding: 5rem 0 4rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+  }
+
+  .eyebrow {
+    width: fit-content;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(212, 163, 115, 0.18);
+    color: var(--ct-color-primary);
+    font-family: "Inter", "Helvetica Neue", sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .hero h1,
+  .article h1 {
+    margin: 0;
+    max-width: 11ch;
+    font-family: "Fraunces", "Iowan Old Style", serif;
+    font-size: clamp(3.2rem, 8vw, 5.8rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+  }
+
+  .hero-copy {
+    max-width: 36rem;
+    color: var(--ct-color-muted);
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+
+  .feature-row,
+  .post-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  .feature-card,
+  .post-card {
+    padding: 1.4rem;
+    border: 1px solid var(--ct-color-border);
+    border-radius: 1.5rem;
+    background: rgba(255, 250, 242, 0.8);
+    box-shadow: var(--ct-shadow-soft);
+  }
+
+  .hero-visual {
+    display: block;
+  }
+
+  .feature-card h2,
+  .post-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.35rem;
+    line-height: 1.15;
+  }
+
+  .muted {
+    color: var(--ct-color-muted);
+  }
+
+  .meta {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    color: var(--ct-color-muted);
+    font-family: "Inter", "Helvetica Neue", sans-serif;
+    font-size: 0.85rem;
+  }
+
+  .article {
+    width: var(--blog-reading-width);
+    margin: 0 auto;
+    padding: 4rem 0 6rem;
+  }
+
+  .article p {
+    font-size: 1.12rem;
+    line-height: 1.9;
+    color: color-mix(in srgb, var(--ct-color-text) 88%, white);
+  }
+
+  .post-media {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-media {
+    margin: 1rem 0 2rem;
+  }
+
+  .author-badge {
+    align-items: center;
+  }
+
+  .avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    object-fit: cover;
+  }
+
+  .schema-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding-bottom: 4rem;
+  }
+
+  .field-list,
+  .chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .field-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .schema-card {
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .field-chip {
+    display: inline-flex;
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(212, 163, 115, 0.14);
+    color: var(--ct-color-primary);
+    font-family: "Inter", "Helvetica Neue", sans-serif;
+    font-size: 0.8rem;
+  }
+
+  .site-footer {
+    margin-top: 2rem;
+    padding: 2.5rem 0 3rem;
+    border-top: 1px solid var(--ct-color-border);
+    background: rgba(255, 250, 242, 0.6);
+  }
+
+  .footer-grid,
+  .footer-columns,
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer-grid {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-copy {
+    max-width: 28rem;
+  }
+
+  .footer-copy strong,
+  .footer-column h2 {
+    font-family: "Inter", "Helvetica Neue", sans-serif;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .footer-copy p,
+  .footer-links {
+    color: var(--ct-color-muted);
+    line-height: 1.7;
+  }
+
+  .footer-column h2 {
+    margin: 0 0 0.8rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-legal {
+    padding-top: 1rem;
+    color: var(--ct-color-muted);
+    font-family: "Inter", "Helvetica Neue", sans-serif;
+    font-size: 0.88rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    margin-bottom: 1.5rem;
+    color: var(--ct-color-primary);
+    font-family: "Inter", "Helvetica Neue", sans-serif;
+    font-size: 0.92rem;
+  }
+
+  @media (max-width: 720px) {
+    .site-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-grid,
+    .footer-columns {
+      flex-direction: column;
+    }
+  }
+</style>
