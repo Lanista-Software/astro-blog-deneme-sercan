@@ -1,5 +1,6 @@
 {
   "canonical_base": "https://example.com",
   "meta_description": "Editorial starter for product teams, journals, and thoughtful publishing.",
-  "meta_title": "Field Notes"
+  "meta_title": "Field Notes",
+  "og_image": "https://studio-staging-5610.up.railway.app/api/cdn/v1/2d9ef82d-4419-4377-8ba7-1ff6f5da91a8/media/original/80096672-8bd5-458b-b2a0-b3abe604e314.webp"
 }
