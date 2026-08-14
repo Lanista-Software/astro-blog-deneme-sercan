@@ -1,0 +1,28 @@
+{
+  "id": "newsletter-subscriber",
+  "name": "Newsletter Subscriber",
+  "kind": "collection",
+  "domain": "editorial",
+  "description": "Newsletter subscription records",
+  "fields": {
+    "email": {
+      "required": true,
+      "type": "email",
+      "unique": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "default": "subscribed",
+      "options": [
+        "subscribed",
+        "unsubscribed"
+      ],
+      "type": "select"
+    },
+    "subscribed_at": {
+      "type": "date"
+    }
+  }
+}
