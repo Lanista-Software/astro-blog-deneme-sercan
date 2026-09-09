@@ -1,0 +1,42 @@
+---
+/**
+ * cr-component: type=comments source=runtime — Comments
+ * Emitted by @contentrain/emitter-astro.
+ * Mounted comments thread: reads the entry's approved comments from the runtime
+ * provider's public API and posts new ones. Pending comments are never shown —
+ * moderation happens on the provider. Renders nothing on a page without an
+ * entry address (a list, a static page).
+ */
+import runtime from '../data/runtime.json'
+
+interface Props {
+  /** Content-store address of the page's entry — the thread's key. */
+  entry?: { model_id: string; entry_id: string; locale?: string }
+  variant?: string
+}
+const { entry, variant = 'default' } = Astro.props
+---
+{entry && (
+  <cr-comments
+    class={`cr-comments cr-comments--${variant}`}
+    data-base-url={runtime.base_url}
+    data-project={runtime.project_id}
+    data-model={entry.model_id}
+    data-entry={entry.entry_id}
+    data-locale={entry.locale}
+    data-variant={variant}
+  >
+    <noscript><p class="cr-noscript">Comments need JavaScript.</p></noscript>
+  </cr-comments>
+)}
+
+<script>
+  import { mountComments } from '../lib/embed'
+
+  class CrComments extends HTMLElement {
+    connectedCallback() {
+      void mountComments(this)
+    }
+  }
+  if (!customElements.get('cr-comments')) customElements.define('cr-comments', CrComments)
+</script>

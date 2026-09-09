@@ -1,0 +1,50 @@
+[
+  {
+    "body": "\n<p class=\"wp-block-paragraph\">Post Status has outlined its strategic policy plan for 2025-2027. The plan aims to support innovation and foster collaboration within the global open-source software community, with a particular emphasis on WordPress.</p>\n\n\n\n<p class=\"wp-block-paragraph\">The foundation actively manages a vibrant community through platforms like Slack, podcasts, newsletters, and dedicated websites, such as <a href=\"https://poststatus.com\">poststatus.com</a> and <a href=\"http://wpspeakers.com\">wpspeakers.com</a>. Key objectives include maintaining and slightly increasing the community&#8217;s size and engagement levels, doubling website traffic within three years, and enhancing support for both online and offline educational events.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Financially, Post Status relies on sponsorships, memberships, and donations, targeting an annual income of €50,000 to €60,000. Efforts are focused on making membership more accessible, aiming to reduce fees while boosting community investments. Expenses primarily cover community platforms, events, educational resources, and essential administrative functions.</p>\n\n\n\n<p class=\"wp-block-paragraph\">The foundation maintains prudent financial practices, building a small reserve to ensure continuity and stability. Regular evaluations, transparent stakeholder communications, and the publication of annual financial reports underline its commitment to accountability and openness.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Post Status is committed to nurturing an inclusive, innovative community that enhances the web&#8217;s accessibility and openness for all.</p>\n\n\n\n<p class=\"wp-block-paragraph\">The complete policy plan, <a href=\"https://poststatus.com/wp-content/uploads/2025/05/Beleidsplan-Stichting-Post-Status-2025-2027.pdf\">in Dutch, can be found here</a>.</p>\n",
+    "dates": [
+      "Friday, May 23rd, 2025",
+      "May 23rd, 2025",
+      "May 23, 2025",
+      "May 23, 2025",
+      "23 May 2025",
+      "2025-05-22",
+      "2:09 AM",
+      "2:09 am",
+      "02:09"
+    ],
+    "entry": {
+      "entry_id": "d1c055eb02a17b60b576a422",
+      "locale": "en",
+      "model_id": "pages"
+    },
+    "params": {
+      "slug": "about/policy-plan"
+    },
+    "slug": "about/policy-plan",
+    "title": "Policy plan"
+  },
+  {
+    "body": "\n<p class=\"wp-block-paragraph\">You were looking for the Post Status logo? Well, you’ve found it!</p>\n\n\n\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\">\n<h2 class=\"wp-block-heading\" id=\"h-the-post-status-logo\">The Post Status logo</h2>\n\n\n\n<figure class=\"wp-block-image size-large\"><img decoding=\"async\" src=\"/assets/bc42868129f4ba83.svg\" alt=\"\"></figure>\n\n\n\n<ul class=\"wp-block-list ba-download\">\n<li><a href=\"/assets/bc42868129f4ba83.svg\">Logo in SVG</a></li>\n</ul>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\">\n<h2 class=\"wp-block-heading\" id=\"h-the-icon\">The icon</h2>\n\n\n<div class=\"wp-block-image\">\n<figure class=\"aligncenter size-large is-resized\"><img decoding=\"async\" src=\"/assets/ae221b9219040323.svg\" alt=\"\" style=\"width:100px\"></figure>\n</div>\n\n\n<ul class=\"wp-block-list ba-download\">\n<li><a href=\"/assets/ae221b9219040323.svg\">Icon in SVG</a></li>\n</ul>\n</div>\n</div>\n\n\n\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\">\n<p class=\"wp-block-paragraph\">You can also choose to move the text underneath the logo like this:</p>\n\n\n\n<figure class=\"wp-block-image size-large\"><img decoding=\"async\" src=\"/assets/01a7bb70714b5f96.png\" alt=\"\"></figure>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\">\n<p class=\"wp-block-paragraph\">Or drop it over a nice image like this:</p>\n\n\n\n<figure data-wp-context=\"{&quot;imageId&quot;:&quot;6aa1a3aaf1687&quot;}\" data-wp-interactive=\"core/image\" data-wp-key=\"6aa1a3aaf1687\" class=\"wp-block-image size-large wp-lightbox-container\"><img loading=\"lazy\" decoding=\"async\" width=\"752\" height=\"306\" data-wp-class--hide=\"state.isContentHidden\" data-wp-class--show=\"state.isContentVisible\" data-wp-init=\"callbacks.setButtonStyles\" data-wp-on--click=\"actions.showLightbox\" data-wp-on--load=\"callbacks.setButtonStyles\" data-wp-on--pointerdown=\"actions.preloadImage\" data-wp-on--pointerenter=\"actions.preloadImageWithDelay\" data-wp-on--pointerleave=\"actions.cancelPreload\" data-wp-on-window--resize=\"callbacks.setButtonStyles\" src=\"/assets/304dac6202ac48c8.jpg\" alt=\"\" class=\"wp-image-7289\" srcset=\"/assets/304dac6202ac48c8.jpg 752w, /assets/5edaa631c201392d.jpg 300w, /assets/4721d829d5aad0b8.jpg 150w, /assets/eae47f588d64260f.jpg 1116w\" sizes=\"auto, (max-width: 752px) 100vw, 752px\"><button class=\"lightbox-trigger\" type=\"button\" aria-haspopup=\"dialog\" data-wp-bind--aria-label=\"state.thisImage.triggerButtonAriaLabel\" data-wp-init=\"callbacks.initTriggerButton\" data-wp-on--click=\"actions.showLightbox\" data-wp-style--right=\"state.thisImage.buttonRight\" data-wp-style--top=\"state.thisImage.buttonTop\">\n\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" fill=\"none\" viewBox=\"0 0 12 12\">\n\t\t\t\t<path fill=\"#fff\" d=\"M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z\" />\n\t\t\t</svg>\n\t\t</button></figure>\n</div>\n</div>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"h-the-post-status-colors\">The Post Status colors</h2>\n\n\n\n<div class=\"wp-block-brand-assets-brand-assets\"><div style=\"--gapWidth:20px;--swatchWidth:150px;--swatchHeight:150px;--borderWidth:1px;--borderRadius:0px;--borderColor:#888888\" class=\"swatch_container\"><div class=\"swatch dark\" style=\"--swatchColor:#2d3641\"><span class=\"name\">Dark grey</span><code>#2D3641</code></div><div class=\"swatch\" style=\"--swatchColor:#f47a20\"><span class=\"name\">Orange</span><code>#F47A20</code></div><div class=\"swatch\" style=\"--swatchColor:#ffffff\"><span class=\"name\">White</span><code>#FFFFFF</code></div></div></div>\n",
+    "dates": [
+      "Thursday, October 23rd, 2025",
+      "October 23rd, 2025",
+      "October 23, 2025",
+      "Oct 23, 2025",
+      "23 October 2025",
+      "2025-10-23",
+      "9:24 AM",
+      "9:24 am",
+      "09:24"
+    ],
+    "entry": {
+      "entry_id": "0b45d652d98bece788d9fe24",
+      "locale": "en",
+      "model_id": "pages"
+    },
+    "params": {
+      "slug": "post-status-logo-style"
+    },
+    "slug": "post-status-logo-style",
+    "title": "Post Status logo & style"
+  }
+]

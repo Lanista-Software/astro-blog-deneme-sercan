@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "site_url": "https://poststatus.com",
+  "generated_at": "2026-09-09T18:23:55.108Z",
+  "comments_endpoint": "/api/comments/v1/{project}/{model}/{entry}?locale={locale}",
+  "entries": [
+    {
+      "wp_id": 164591,
+      "kind": "page",
+      "path": "/2025-black-friday-cyber-monday-wordpress-deals/",
+      "model_id": "pages",
+      "entry_id": "378a1867145ff149fb35c10f",
+      "locale": "en"
+    },
+    {
+      "wp_id": 163892,
+      "kind": "page",
+      "path": "/about/policy-plan/",
+      "model_id": "pages",
+      "entry_id": "d1c055eb02a17b60b576a422",
+      "locale": "en"
+    },
+    {
+      "wp_id": 164937,
+      "kind": "page",
+      "path": "/post-status-logo-style/",
+      "model_id": "pages",
+      "entry_id": "0b45d652d98bece788d9fe24",
+      "locale": "en"
+    },
+    {
+      "wp_id": 166037,
+      "kind": "post",
+      "path": "/lentamente/",
+      "model_id": "posts",
+      "entry_id": "1bf070fc977abffc64f0c80b",
+      "locale": "en"
+    },
+    {
+      "wp_id": 165851,
+      "kind": "post",
+      "path": "/back-from-burnout/",
+      "model_id": "posts",
+      "entry_id": "e3e475c3957f49c0128f05e8",
+      "locale": "en"
+    },
+    {
+      "wp_id": 165079,
+      "kind": "post",
+      "path": "/post-status-happiness-hour-session-thirty-nine/",
+      "model_id": "posts",
+      "entry_id": "24f9297dd9a7b93bce7c33b0",
+      "locale": "en"
+    },
+    {
+      "wp_id": 164763,
+      "kind": "post",
+      "path": "/post-status-cache-up-with-joe-dolson/",
+      "model_id": "posts",
+      "entry_id": "69d734c790cdeb06b5db05a8",
+      "locale": "en"
+    },
+    {
+      "wp_id": 164732,
+      "kind": "post",
+      "path": "/post-status-happiness-hour-session-thirty-eight/",
+      "model_id": "posts",
+      "entry_id": "68bee6725afed40d56ba4280",
+      "locale": "en"
+    },
+    {
+      "wp_id": 164473,
+      "kind": "post",
+      "path": "/post-status-happiness-hour-session-thirty-seven/",
+      "model_id": "posts",
+      "entry_id": "affafcfdfa9e37dd15f6d244",
+      "locale": "en"
+    },
+    {
+      "wp_id": 164447,
+      "kind": "post",
+      "path": "/post-status-cache-up-with-miriam-schwab/",
+      "model_id": "posts",
+      "entry_id": "f1c857bd5f280d373ef43098",
+      "locale": "en"
+    }
+  ],
+  "unbound": []
+}

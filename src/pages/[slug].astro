@@ -1,0 +1,29 @@
+---
+// Route: post (/:slug) — collection: posts — emitted by @contentrain/emitter-astro
+import Layout from '../layouts/Post.astro'
+import data from '../data/posts.json'
+import { postMarks, type EmittedPost } from '../lib/fill'
+
+export function getStaticPaths() {
+  // The JSON is data; its contract is EmittedPost. Inferring the type from the
+  // file would type only the fields this site happens to carry, and "astro
+  // check" (which the build runs first) would then reject post.params on a site
+  // whose permalinks need none. The cast lives INSIDE getStaticPaths because
+  // Astro hoists this function: it sees imports, not the component scope.
+  const posts = data as EmittedPost[]
+  // A post carries its own route parameters (date parts of a dated permalink,
+  // a post id) — using the template post's would send every other post to the
+  // wrong address.
+  return posts.map((post) => ({ params: { ...(post.params ?? {}), slug: post.slug }, props: { post } }))
+}
+type Props = { post: EmittedPost }
+const { post } = Astro.props as Props
+---
+<Layout
+  title={post.title}
+  marks={postMarks(post)}
+  body={post.body}
+  css={post.css ?? []}
+  lang={post.locale ?? "en-US"}
+  entry={post.entry}
+/>

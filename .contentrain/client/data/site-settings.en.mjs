@@ -1,6 +1,0 @@
-export default {
-  "default_locale": "en",
-  "site_name": "Field Notes",
-  "site_tagline": "A publication template for product-led teams with taste.",
-  "theme_name": "editorial_dawn"
-}

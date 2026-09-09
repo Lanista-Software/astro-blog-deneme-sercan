@@ -1,0 +1,245 @@
+{
+  "00b73fe85865f08eb1653f13": {
+    "description": "Development in (and with) WordPress.",
+    "name": "Development",
+    "parent": "377a30f600258b67a537acf2",
+    "slug": "development",
+    "wp_id": 7
+  },
+  "028a31ec67d24b850b169807": {
+    "description": "Post Status Draft is an interview and discussion-based podcast featuring WordPress and other web professionals, product founders, and agency owners. 📝 Browse past episodes and subscribe to our podcasts on Spotify , Amazon Music, Google Podcasts , iTunes , Castro , YouTube , Stitcher , Player.fm , Pocket Casts , Simplecast , or get them by RSS . 🎙️",
+    "name": "Draft",
+    "parent": "95b5c2802adf6c8280fe8567",
+    "slug": "draft",
+    "wp_id": 12479
+  },
+  "02feee8de5283efa82cf73ae": {
+    "description": "Post Status Live webinars are hosted by Post Status Publisher and CEO, Cory Miller. They feature special guests and subjects relevant to WordPress professionals. Audience participation is welcome! Let’s learn together. 👉 Subscribe to the RSS feed for Post Status Live. 📺",
+    "name": "Post Status Live",
+    "parent": "c685c428939ea434d5bea2ec",
+    "slug": "live",
+    "wp_id": 14074
+  },
+  "05dbf8dd984521c35eeecc29": {
+    "description": "Weekly updates and takes from the Post Status team.",
+    "name": "Post Status Team Blog",
+    "parent": "c308532d6d661166671c4a18",
+    "slug": "team-blog",
+    "wp_id": 15026
+  },
+  "0a652bf3ec9d062b451bf51f": {
+    "description": "News, information, and guidance for underrepresented people who are working in tech and employers who want to build a diverse and inclusive workforce in the WordPress ecosystem and their own companies.",
+    "name": "Underrepresentation in Technology",
+    "parent": "d1c18416304e3e0778ada0e7",
+    "slug": "underrepresentation-in-technology",
+    "wp_id": 14151
+  },
+  "0e72bb4f84af307079e3f506": {
+    "name": "WP Speakers Virtual Stage Series",
+    "slug": "wp-speakers-virtual-stage-series",
+    "wp_id": 18046
+  },
+  "16684913e21aae5a9fba121c": {
+    "description": "Learn new skills and build your knowledge to enhance your career in WordPress! Post Status Upgrade is an ongoing series of live workshops centered around a particular skill or learning activity.",
+    "name": "Post Status Upgrade",
+    "parent": "c685c428939ea434d5bea2ec",
+    "slug": "post-status-upgrade",
+    "wp_id": 15060
+  },
+  "26d35f85f3a08650f18ee12f": {
+    "description": "The business of WordPress.",
+    "name": "Business",
+    "parent": "ba97ce6cadf8fd0130136f90",
+    "slug": "business",
+    "wp_id": 181
+  },
+  "2f853276032e3d9e6dd16277": {
+    "description": "Deeper dives and longer writing about WordPress news and people by the Post Status team and our wonderful contributing writers.",
+    "name": "Features",
+    "parent": "ba97ce6cadf8fd0130136f90",
+    "slug": "features",
+    "wp_id": 15111
+  },
+  "3053d54efb63fe23f0e21899": {
+    "name": "Origin Stories",
+    "parent": "41298f32091af9a6c5f63e49",
+    "slug": "origin-stories",
+    "wp_id": 17852
+  },
+  "377a30f600258b67a537acf2": {
+    "description": "Cool tools and tech talk for designers, developers, and engineers working with WordPress.",
+    "name": "Tech",
+    "parent": "ba97ce6cadf8fd0130136f90",
+    "slug": "tech",
+    "wp_id": 17448
+  },
+  "39274a263007bf1207bbac9b": {
+    "description": "Meet our professional and business members!",
+    "name": "Member Spotlights",
+    "parent": "ba97ce6cadf8fd0130136f90",
+    "slug": "member-spotlights",
+    "wp_id": 14335
+  },
+  "3f7d2bbfcb9cc6d5a5153bbb": {
+    "description": "👨‍💻 The Get Hired blog is all about starting, changing, or growing your career in WordPress and the remote/digital workplace in distributed companies. ✉️ Subscribe to the Get Hired newsletter for job opportunities and WordPress career-building guidance. 🎧 Tune in to the Get Hired podcast for more in-depth career development advice. 🐦 Follow on Twitter! @GetHiredWP .",
+    "name": "Get Hired Blog",
+    "parent": "c308532d6d661166671c4a18",
+    "slug": "get-hired-blog",
+    "wp_id": 14326
+  },
+  "41298f32091af9a6c5f63e49": {
+    "name": "WordPress at 20",
+    "parent": "ba97ce6cadf8fd0130136f90",
+    "slug": "wordpress-at-20",
+    "wp_id": 17851
+  },
+  "4efa256525116a8419cd9327": {
+    "description": "WordPress hosting and the hosting industry.",
+    "name": "Hosting",
+    "parent": "377a30f600258b67a537acf2",
+    "slug": "hosting",
+    "wp_id": 4
+  },
+  "4f18d2e41637ae4a7ec194e2": {
+    "description": "News from Make WordPress and other writing about the WordPress core teams and project.",
+    "name": "Make WordPress",
+    "parent": "ba97ce6cadf8fd0130136f90",
+    "slug": "make-wordpress",
+    "wp_id": 15452
+  },
+  "56e206db45bc81c5cf75b42d": {
+    "name": "Marketing",
+    "parent": "26d35f85f3a08650f18ee12f",
+    "slug": "marketing",
+    "wp_id": 18045
+  },
+  "6e7b392d839732be5409adcb": {
+    "description": "Design in (and with) WordPress.",
+    "name": "Design",
+    "parent": "377a30f600258b67a537acf2",
+    "slug": "design",
+    "wp_id": 8
+  },
+  "74b805ee7624af83d7cbf41c": {
+    "name": "WP Products",
+    "parent": "26d35f85f3a08650f18ee12f",
+    "slug": "wp-products",
+    "wp_id": 17846
+  },
+  "8098ecd1c8a90f8f733c7fae": {
+    "name": "WP Agency and Business",
+    "parent": "26d35f85f3a08650f18ee12f",
+    "slug": "wp-agency-and-business",
+    "wp_id": 17845
+  },
+  "82c9cc6c8c043cbc9f4bf20b": {
+    "name": "Case Studies",
+    "slug": "case-studies",
+    "wp_id": 17854
+  },
+  "897346e40b89a5d40f16bab9": {
+    "description": "A microblog of curated WordPress news and commentary.",
+    "name": "Notes",
+    "parent": "ba97ce6cadf8fd0130136f90",
+    "slug": "notes",
+    "wp_id": 15084
+  },
+  "900ae7fddfdc155e467ab195": {
+    "description": "Join Dan Knauss with Nyasha Green and special guests each week on the Post Status Excerpt podcast. The Excerpt is your go-to place for weekly conversations covering the WordPress news and topics that we’re most engaged with in the WordPress community. 🎧 Browse past episodes and subscribe to our podcasts on Spotify , Amazon Music, Google Podcasts , iTunes , Castro , YouTube , Stitcher , Player.fm , Pocket Casts , Simplecast , or get them by RSS .",
+    "name": "The Excerpt",
+    "parent": "95b5c2802adf6c8280fe8567",
+    "slug": "the-excerpt",
+    "wp_id": 226
+  },
+  "95b5c2802adf6c8280fe8567": {
+    "description": "Four Post Status podcasts — Excerpt , Draft , Comments , and Get Hired — offer news, insights, discussions, and career advice for WordPress professionals. 🎙️ 🎧 Browse past episodes and subscribe to our podcasts on Spotify , Amazon Music, Google Podcasts , iTunes , Castro , YouTube , Stitcher , Player.fm , Pocket Casts , Simplecast , or get them by RSS . Get Hired is on Castos ( RSS ).",
+    "name": "Post Status Podcasts",
+    "slug": "podcast",
+    "wp_id": 195
+  },
+  "9bfd672a7841bb8e114ab06b": {
+    "description": "Carefully selected and weekly curated news from the WordPress ecosystem — and beyond. Keep up with WP, WooCommerce , web tech, and business topics that matter to you. We also gather new podcast episodes and videos that are worth your time, other than our own . For a quick, weekly digest of what's happening in the WordPress core teams head over to This Week in WordPress.org .",
+    "name": "The Week in Review",
+    "parent": "ba97ce6cadf8fd0130136f90",
+    "slug": "week-in-review",
+    "wp_id": 197
+  },
+  "a6585d3890fb3b25e4a248d0": {
+    "description": "The Get Hired podcast is hosted by Cory Miller and Courtney Robertson. Learn about WordPress jobs, employers, and employment trends with a focus on the things you need to know to get hired and build a career in WordPress. 🎙️ ✉️ Subscribe to our Newsletter for the latest WordPress job opportunities from great employers — plus our latest podcast episodes, articles, and career tips. 🎧 Listen at Castos ( RSS ) or catch us on your favorite podcast source. 🐦 Follow on Twitter! @GetHiredWP .",
+    "name": "Get Hired",
+    "parent": "95b5c2802adf6c8280fe8567",
+    "slug": "get-hired",
+    "wp_id": 13431
+  },
+  "ba97ce6cadf8fd0130136f90": {
+    "description": "News and insights about WordPress and its ecosystem by Post Status staff and contributors for our members and the WordPress community.",
+    "name": "WordPress News",
+    "slug": "wordpress",
+    "wp_id": 1
+  },
+  "c0218547195a5d38e3b1cc81": {
+    "description": "WordPress security news and issues.",
+    "name": "Security",
+    "parent": "377a30f600258b67a537acf2",
+    "slug": "security",
+    "wp_id": 192
+  },
+  "c308532d6d661166671c4a18": {
+    "description": "The latest posts from the Post Status Team and Get Hired blogs.",
+    "name": "Blogs",
+    "slug": "blogs",
+    "wp_id": 15440
+  },
+  "c685c428939ea434d5bea2ec": {
+    "description": "These are recordings of live virtual events featuring special guests with audience participation on subjects relevant to WordPress professionals. Let's learn together!",
+    "name": "Post Status Video",
+    "slug": "webinars",
+    "wp_id": 12509
+  },
+  "d1c18416304e3e0778ada0e7": {
+    "description": "Career development, employment issues, and work culture in the WordPress ecosystem and beyond, especially in distributed companies with a remote workforce.",
+    "name": "Careers",
+    "parent": "ba97ce6cadf8fd0130136f90",
+    "slug": "careers",
+    "wp_id": 180
+  },
+  "d1d9272d03234d92e2e030a2": {
+    "description": "The latest WooCommerce news and analysis.",
+    "name": "WooCommerce",
+    "parent": "ba97ce6cadf8fd0130136f90",
+    "slug": "woocommerce",
+    "wp_id": 14998
+  },
+  "dd54276eb6ef23021bf982ea": {
+    "description": "This is everything we publish that's fit for a WordPress-focused RSS feed .",
+    "name": "Planet",
+    "parent": "ba97ce6cadf8fd0130136f90",
+    "slug": "planet",
+    "wp_id": 196
+  },
+  "de9e77e0140e4fe4d0fcf4d5": {
+    "name": "Launching a WordPress Product in Public",
+    "parent": "028a31ec67d24b850b169807",
+    "slug": "launching-a-wordpress-product-in-public",
+    "wp_id": 17850
+  },
+  "e32f02040aee0a299c7206a7": {
+    "description": "Post Status Comments provides a stage for WordPress professionals to exchange ideas and talk about recent topics and trends. Join us live as Post Status Club Members share their experiences, analyses, and feelings about topics that matter to the WordPress community and beyond. 💬 🎧 Browse past episodes and subscribe to our podcasts on Spotify , Amazon Music, Google Podcasts , iTunes , Castro , YouTube , Stitcher , Player.fm , Pocket Casts , Simplecast , or get them by RSS .",
+    "name": "Comments",
+    "parent": "95b5c2802adf6c8280fe8567",
+    "slug": "comments",
+    "wp_id": 12529
+  },
+  "eac98902d73e074feb261226": {
+    "name": "WordPress Community",
+    "parent": "ba97ce6cadf8fd0130136f90",
+    "slug": "community",
+    "wp_id": 15000
+  },
+  "eb4a1a1d091dbbf586f7f10a": {
+    "description": "This is a weekly column by Marieke van de Rakt and Joost de Valk , veteran entrepreneurs and leaders in WP, and partners at Post Status, sharing their perspectives on what they're seeing in WordPress.",
+    "name": "Two Worlds of WordPress",
+    "slug": "two-worlds-of-wordpress",
+    "wp_id": 18036
+  }
+}

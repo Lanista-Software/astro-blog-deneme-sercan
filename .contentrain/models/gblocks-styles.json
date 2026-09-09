@@ -1,0 +1,50 @@
+{
+  "domain": "custom",
+  "fields": {
+    "link": {
+      "label": "Original permalink",
+      "order": 70,
+      "type": "url"
+    },
+    "menu_order": {
+      "label": "Menu order",
+      "order": 80,
+      "type": "integer"
+    },
+    "modified_at": {
+      "label": "Modified at",
+      "order": 60,
+      "type": "datetime"
+    },
+    "published_at": {
+      "label": "Published at",
+      "order": 40,
+      "type": "datetime"
+    },
+    "slug": {
+      "label": "Slug",
+      "order": 20,
+      "required": true,
+      "type": "slug",
+      "unique": true
+    },
+    "title": {
+      "label": "Title",
+      "order": 10,
+      "required": true,
+      "type": "string"
+    },
+    "wp_id": {
+      "label": "WP post ID",
+      "order": 50,
+      "required": true,
+      "type": "integer",
+      "unique": true
+    }
+  },
+  "i18n": false,
+  "id": "gblocks-styles",
+  "kind": "collection",
+  "name": "gblocks-styles",
+  "title_field": "title"
+}

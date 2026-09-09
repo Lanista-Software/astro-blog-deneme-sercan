@@ -1,0 +1,87 @@
+{
+  "comments": {
+    "enabled": true
+  },
+  "domain": "blog",
+  "fields": {
+    "author": {
+      "label": "Author",
+      "model": "authors",
+      "order": 70,
+      "type": "relation"
+    },
+    "body": {
+      "label": "Body",
+      "order": 50,
+      "type": "richtext"
+    },
+    "categories": {
+      "label": "category",
+      "model": "categories",
+      "order": 80,
+      "type": "relations"
+    },
+    "comments_open": {
+      "label": "Comments open",
+      "order": 140,
+      "type": "boolean"
+    },
+    "cover": {
+      "label": "Cover",
+      "model": "media",
+      "order": 100,
+      "type": "relation"
+    },
+    "excerpt": {
+      "label": "Excerpt",
+      "order": 40,
+      "type": "text"
+    },
+    "link": {
+      "label": "Original permalink",
+      "order": 130,
+      "type": "url"
+    },
+    "modified_at": {
+      "label": "Modified at",
+      "order": 120,
+      "type": "datetime"
+    },
+    "published_at": {
+      "label": "Published at",
+      "order": 60,
+      "type": "datetime"
+    },
+    "slug": {
+      "label": "Slug",
+      "order": 20,
+      "required": true,
+      "type": "slug",
+      "unique": true
+    },
+    "tags": {
+      "label": "post_tag",
+      "model": "tags",
+      "order": 90,
+      "type": "relations"
+    },
+    "title": {
+      "label": "Title",
+      "order": 10,
+      "required": true,
+      "type": "string"
+    },
+    "wp_id": {
+      "label": "WP post ID",
+      "order": 110,
+      "required": true,
+      "type": "integer",
+      "unique": true
+    }
+  },
+  "i18n": false,
+  "id": "posts",
+  "kind": "collection",
+  "name": "Posts",
+  "title_field": "title"
+}
