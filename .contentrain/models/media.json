@@ -36,11 +36,8 @@
       "model": [
         "posts",
         "pages",
-        "gp-elements",
-        "gblocks-styles",
         "ps-member-person",
-        "ps-member-company",
-        "gblocks-global-style"
+        "ps-member-company"
       ],
       "order": 110,
       "type": "relation"

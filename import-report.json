@@ -5,7 +5,7 @@
   "meta_fields": {},
   "acf_fields": {},
   "skipped_types": [],
-  "dropped_relations": 705,
+  "dropped_relations": 709,
   "models": {
     "authors": {
       "kind": "collection",
@@ -43,18 +43,6 @@
       "fields": 12,
       "entries": 135
     },
-    "gp-elements": {
-      "kind": "collection",
-      "domain": "custom",
-      "fields": 8,
-      "entries": 31
-    },
-    "gblocks-styles": {
-      "kind": "collection",
-      "domain": "custom",
-      "fields": 7,
-      "entries": 1
-    },
     "ps-member-person": {
       "kind": "collection",
       "domain": "custom",
@@ -66,12 +54,6 @@
       "domain": "custom",
       "fields": 9,
       "entries": 210
-    },
-    "gblocks-global-style": {
-      "kind": "collection",
-      "domain": "custom",
-      "fields": 7,
-      "entries": 5
     },
     "comments": {
       "kind": "collection",
