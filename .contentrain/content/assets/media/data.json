@@ -10610,10 +10610,6 @@
     "file": "2024/02/Date-removed.png",
     "height": 35,
     "mime": "image/png",
-    "parent": {
-      "model": "gp-elements",
-      "ref": "0227d5473d5a9492ce396003"
-    },
     "slug": "date-removed",
     "title": "Date removed",
     "uploaded_at": "2024-02-01T13:47:08Z",
@@ -22456,10 +22452,6 @@
     "file": "2023/07/logo_progress_planner_emilia.svg",
     "height": 500,
     "mime": "image/svg+xml",
-    "parent": {
-      "model": "gp-elements",
-      "ref": "23584076daf9cde5d5a50197"
-    },
     "slug": "logo-progress-planner-emilia",
     "title": "logo_progress_planner_emilia",
     "uploaded_at": "2025-01-28T14:48:46Z",
@@ -31755,10 +31747,6 @@
     "file": "2023/07/WPM_Logo_Wide.png",
     "height": 215,
     "mime": "image/png",
-    "parent": {
-      "model": "gp-elements",
-      "ref": "23584076daf9cde5d5a50197"
-    },
     "slug": "wpm-logo-wide",
     "title": "WPM_Logo_Wide",
     "uploaded_at": "2025-04-04T09:54:28Z",
@@ -39576,10 +39564,6 @@
     "file": "2024/02/Budget-removed.png",
     "height": 32,
     "mime": "image/png",
-    "parent": {
-      "model": "gp-elements",
-      "ref": "0227d5473d5a9492ce396003"
-    },
     "slug": "budget-removed",
     "title": "Budget removed",
     "uploaded_at": "2024-02-01T13:46:04Z",
