@@ -1,0 +1,79 @@
+{
+  "domain": "site",
+  "fields": {
+    "enter_your_email": {
+      "label": "Enter your email",
+      "order": 30,
+      "required": true,
+      "type": "email"
+    },
+    "first_name": {
+      "label": "First name",
+      "order": 10,
+      "required": true,
+      "type": "string"
+    },
+    "item_meta_24": {
+      "label": "-- Please select --",
+      "options": [
+        "My product or service",
+        "Something I think you should cover",
+        "A special deal I'm offering",
+        "An issue with the site",
+        "I have a billing enquiry",
+        "I'd like to write for Post Status",
+        "Something else"
+      ],
+      "order": 40,
+      "required": true,
+      "type": "select"
+    },
+    "last_name": {
+      "label": "Last name",
+      "order": 20,
+      "required": true,
+      "type": "string"
+    },
+    "subject_of_your_message": {
+      "label": "Subject of your message",
+      "order": 50,
+      "required": true,
+      "type": "string"
+    },
+    "submitted_at": {
+      "label": "Submitted at",
+      "order": 80,
+      "type": "datetime"
+    },
+    "yes_please": {
+      "label": "Yes, please!",
+      "order": 70,
+      "type": "boolean"
+    },
+    "your_message": {
+      "label": "Your message",
+      "order": 60,
+      "required": true,
+      "type": "text"
+    }
+  },
+  "form": {
+    "enabled": true,
+    "exposedFields": [
+      "first_name",
+      "last_name",
+      "enter_your_email",
+      "item_meta_24",
+      "subject_of_your_message",
+      "your_message",
+      "yes_please"
+    ],
+    "honeypot": true,
+    "public": true
+  },
+  "i18n": false,
+  "id": "contact",
+  "kind": "collection",
+  "name": "Contact form",
+  "title_field": "first_name"
+}

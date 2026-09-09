@@ -1,7 +1,8 @@
 ---
-// Family: page-0 (Sayfa ailesi 1) — emitted by @contentrain/emitter-astro
-import chrome from '../data/chrome/page-0.json'
-import { cssHref, fillAttrs, renderTemplate, composeBody } from '../lib/fill'
+// Family: page-solo-0 (Contact Post Status) — emitted by @contentrain/emitter-astro
+import chrome from '../data/chrome/page-solo-0.json'
+import { cssHref, fillAttrs, renderTemplate, composeBody, splitComponents } from '../lib/fill'
+import CContact from '../components/CContact.astro'
 
 interface Props {
   title?: string
@@ -15,7 +16,7 @@ interface Props {
   /** Content-store address of the page's entry — mounted components (comments) key on it. */
   entry?: { model_id: string; entry_id: string; locale?: string }
 }
-const { title = '', marks = {}, body, css = [], lang = "en-US" } = Astro.props
+const { title = '', marks = {}, body, css = [], lang = "en-US", entry } = Astro.props
 const head = renderTemplate(chrome.head, marks)
 // Root attributes carry the theme's layout hooks; values may hold @@marks@@.
 // An explicit lang from the source wins over the project default.
@@ -25,6 +26,16 @@ const content = body ?? (Astro.slots.has('default') ? await Astro.slots.render('
 // Split at the marker FIRST, then fill marks per side — filling first would
 // eat the @@body@@ inside the marker and silently drop the content.
 const html = composeBody(chrome.body, marks, content)
+// Components the chrome mounts at <!--@@component:ID@@--> markers; the page's
+// entry address travels to each so a comments thread knows which entry it is.
+const mounts: Record<string, { Mount: typeof CContact; variant: string } | undefined> = {
+  "c-contact": { Mount: CContact, variant: "default" },
+}
+const parts = splitComponents(html).map((part) => ({
+  html: part.html,
+  Mount: part.component ? mounts[part.component]?.Mount : undefined,
+  variant: part.component ? (mounts[part.component]?.variant ?? 'default') : 'default',
+}))
 ---
 <!doctype html>
 <html {...htmlAttrs}>
@@ -39,6 +50,6 @@ const html = composeBody(chrome.body, marks, content)
     <title>{title}</title>
   </head>
   <body {...bodyAttrs}>
-    <Fragment set:html={html} />
+    {parts.map(({ html: part, Mount, variant }) => (Mount ? <Mount entry={entry} variant={variant} /> : <Fragment set:html={part} />))}
   </body>
 </html>
