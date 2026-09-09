@@ -1,0 +1,33 @@
+{
+  "domain": "blog",
+  "fields": {
+    "email": {
+      "label": "Email",
+      "order": 30,
+      "type": "email"
+    },
+    "name": {
+      "label": "Name",
+      "order": 10,
+      "required": true,
+      "type": "string"
+    },
+    "slug": {
+      "label": "Slug",
+      "order": 20,
+      "required": true,
+      "type": "slug",
+      "unique": true
+    },
+    "wp_id": {
+      "label": "WP user ID",
+      "order": 40,
+      "type": "integer"
+    }
+  },
+  "i18n": false,
+  "id": "authors",
+  "kind": "collection",
+  "name": "Authors",
+  "title_field": "name"
+}

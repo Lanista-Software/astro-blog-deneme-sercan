@@ -1,7 +1,9 @@
 {
   "domains": [
-    "system",
-    "editorial"
+    "assets",
+    "blog",
+    "custom",
+    "site"
   ],
   "locales": {
     "default": "en",
@@ -9,7 +11,8 @@
       "en"
     ]
   },
+  "platform": "web",
   "stack": "astro",
   "version": 1,
-  "workflow": "auto-merge"
+  "workflow": "review"
 }

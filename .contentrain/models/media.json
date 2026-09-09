@@ -1,0 +1,88 @@
+{
+  "domain": "assets",
+  "fields": {
+    "alt": {
+      "label": "Alt text",
+      "order": 40,
+      "type": "string"
+    },
+    "caption": {
+      "label": "Caption",
+      "order": 50,
+      "type": "text"
+    },
+    "description": {
+      "label": "Description",
+      "order": 60,
+      "type": "text"
+    },
+    "file": {
+      "label": "Upload path",
+      "order": 100,
+      "type": "string"
+    },
+    "height": {
+      "label": "Height",
+      "order": 90,
+      "type": "integer"
+    },
+    "mime": {
+      "label": "MIME type",
+      "order": 70,
+      "type": "string"
+    },
+    "parent": {
+      "label": "Attached to",
+      "model": [
+        "posts",
+        "pages",
+        "gp-elements",
+        "gblocks-styles",
+        "ps-member-person",
+        "ps-member-company",
+        "gblocks-global-style"
+      ],
+      "order": 110,
+      "type": "relation"
+    },
+    "slug": {
+      "label": "Slug",
+      "order": 20,
+      "required": true,
+      "type": "slug",
+      "unique": true
+    },
+    "title": {
+      "label": "Title",
+      "order": 10,
+      "required": true,
+      "type": "string"
+    },
+    "uploaded_at": {
+      "label": "Uploaded at",
+      "order": 130,
+      "type": "datetime"
+    },
+    "url": {
+      "label": "Source URL",
+      "order": 30,
+      "required": true,
+      "type": "url"
+    },
+    "width": {
+      "label": "Width",
+      "order": 80,
+      "type": "integer"
+    },
+    "wp_id": {
+      "label": "WP attachment ID",
+      "order": 120,
+      "type": "integer"
+    }
+  },
+  "i18n": false,
+  "id": "media",
+  "kind": "collection",
+  "name": "Media",
+  "title_field": "title"
+}

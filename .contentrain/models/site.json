@@ -1,0 +1,31 @@
+{
+  "domain": "site",
+  "fields": {
+    "language": {
+      "label": "Language",
+      "order": 40,
+      "type": "string"
+    },
+    "tagline": {
+      "label": "Tagline",
+      "order": 20,
+      "type": "string"
+    },
+    "title": {
+      "label": "Site title",
+      "order": 10,
+      "required": true,
+      "type": "string"
+    },
+    "url": {
+      "label": "URL",
+      "order": 30,
+      "type": "url"
+    }
+  },
+  "i18n": false,
+  "id": "site",
+  "kind": "singleton",
+  "name": "Site",
+  "title_field": "title"
+}

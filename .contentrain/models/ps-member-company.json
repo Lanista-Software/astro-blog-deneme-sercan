@@ -1,0 +1,62 @@
+{
+  "domain": "custom",
+  "fields": {
+    "author": {
+      "label": "Author",
+      "model": "authors",
+      "order": 60,
+      "type": "relation"
+    },
+    "body": {
+      "label": "Body",
+      "order": 40,
+      "type": "richtext"
+    },
+    "cover": {
+      "label": "Cover",
+      "model": "media",
+      "order": 70,
+      "type": "relation"
+    },
+    "link": {
+      "label": "Original permalink",
+      "order": 100,
+      "type": "url"
+    },
+    "modified_at": {
+      "label": "Modified at",
+      "order": 90,
+      "type": "datetime"
+    },
+    "published_at": {
+      "label": "Published at",
+      "order": 50,
+      "type": "datetime"
+    },
+    "slug": {
+      "label": "Slug",
+      "order": 20,
+      "required": true,
+      "type": "slug",
+      "unique": true
+    },
+    "title": {
+      "label": "Title",
+      "order": 10,
+      "required": true,
+      "type": "string"
+    },
+    "wp_id": {
+      "label": "WP post ID",
+      "order": 80,
+      "required": true,
+      "type": "integer",
+      "unique": true
+    }
+  },
+  "i18n": false,
+  "id": "ps-member-company",
+  "kind": "collection",
+  "name": "ps-member-company",
+  "title_field": "title"
+}
