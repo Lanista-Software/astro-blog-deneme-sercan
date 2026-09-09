@@ -1,0 +1,18 @@
+{
+  "lastOperation": {
+    "locale": "en",
+    "model": "contact",
+    "source": "mcp-studio",
+    "timestamp": "2026-09-09T20:03:55.459Z",
+    "tool": "merge"
+  },
+  "stats": {
+    "entries": 11520,
+    "lastSync": "2026-09-09T20:03:55.459Z",
+    "locales": [
+      "en"
+    ],
+    "models": 10
+  },
+  "version": "1"
+}
